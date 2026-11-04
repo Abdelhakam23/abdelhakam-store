@@ -52,12 +52,6 @@ export const productMutationSchema = productSchema.extend({
   category: z.string().regex(/^[a-f\d]{24}$/i, "Invalid category id"),
 });
 
-export const reviewSchema = z.object({
-  productId: z.string().trim().min(1),
-  rating: z.number().int().min(1).max(5),
-  comment: trimmedString("Comment", 2000),
-});
-
 export const orderSchema = z.object({
   items: z
     .array(

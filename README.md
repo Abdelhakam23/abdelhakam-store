@@ -73,12 +73,6 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 # Required only when Stripe payments are enabled
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-
-# Optional media integration values
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
 ```
 
 Generate a secure Auth.js secret:
