@@ -5,7 +5,12 @@ const serverEnvSchema = z.object({
   MONGODB_DB_NAME: z.string().min(1).default("ecommerce_store"),
   AUTH_SECRET: z.string().min(32, "AUTH_SECRET must be at least 32 characters"),
   NEXT_PUBLIC_APP_URL: z.string().url().default("http://localhost:3000"),
- 
+  STRIPE_SECRET_KEY: z.string().optional(),
+  STRIPE_WEBHOOK_SECRET: z.string().optional(),
+  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().optional(),
+  CLOUDINARY_CLOUD_NAME: z.string().optional(),
+  CLOUDINARY_API_KEY: z.string().optional(),
+  CLOUDINARY_API_SECRET: z.string().optional(),
 });
 
 export function getServerEnv() {

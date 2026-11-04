@@ -45,12 +45,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#e5d9d0]/80 bg-[#fbf8f4]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-5 px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-[76px] min-w-0 max-w-[1440px] items-center justify-between gap-2 px-3 sm:gap-5 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className="shrink-0 text-xl font-semibold tracking-[-0.06em]"
+          className="min-w-0 shrink text-base font-semibold tracking-[-0.06em] sm:text-xl"
         >
-          Abdelhakam<span className="text-[#b98768]"> Store</span>
+          <span className="block truncate">Abdelhakam<span className="text-[#b98768]"> Store</span></span>
         </Link>
         <nav className="hidden items-center gap-7 text-sm text-[#665a55] lg:flex">
           {copy.nav.map((item) => (
@@ -63,7 +63,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-1">
+        <div className="flex shrink-0 items-center gap-0 sm:gap-1">
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
@@ -76,7 +76,7 @@ export function SiteHeader() {
           <Link
             href="/wishlist"
             aria-label={copy.ui.wishlist}
-            className="relative rounded-full p-2.5 transition hover:bg-[#f2e7df]"
+            className="relative rounded-full p-2.5 transition hover:bg-[#f2e7df] max-[380px]:hidden"
           >
             <Heart size={19} strokeWidth={1.7} />
             {wishlistCount > 0 && (
