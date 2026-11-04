@@ -6,6 +6,7 @@ import { connectToDatabase } from "@/lib/db";
 import { serializeDocument } from "@/lib/serialize";
 import { productFilterSchema, productMutationSchema } from "@/lib/validation";
 import { Product } from "@/models/Product";
+import "@/models/Category";
 import { createProductSearchFilter } from "@/lib/product-search";
 
 export async function GET(request: Request) {

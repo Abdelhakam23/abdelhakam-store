@@ -6,6 +6,7 @@ import { requireCurrentAdmin } from "@/lib/authz";
 import { serializeDocument } from "@/lib/serialize";
 import { productMutationSchema } from "@/lib/validation";
 import { Product } from "@/models/Product";
+import "@/models/Category";
 
 export async function GET(
   _request: Request,

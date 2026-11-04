@@ -4,6 +4,7 @@ import { Types } from "mongoose";
 import { auth } from "@/auth";
 import { connectToDatabase } from "@/lib/db";
 import { User } from "@/models/User";
+import "@/models/Product";
 
 export async function GET() {
   const session = await auth();
